@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @skeleton.name %>
+</p>
+
+<p>
+  <strong>Facts:</strong>
+  <%= @skeleton.facts %>
+</p>
+
+<%= link_to 'Edit', edit_skeleton_path(@skeleton) %> |
+<%= link_to 'Back', skeletons_path %>

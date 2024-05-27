@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Skeletons</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Facts</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @skeletons.each do |skeleton| %>
+      <tr>
+        <td><%= skeleton.name %></td>
+        <td><%= skeleton.facts %></td>
+        <td><%= link_to 'Show', skeleton %></td>
+        <td><%= link_to 'Edit', edit_skeleton_path(skeleton) %></td>
+        <td><%= link_to 'Destroy', skeleton, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Skeleton', new_skeleton_path %>
