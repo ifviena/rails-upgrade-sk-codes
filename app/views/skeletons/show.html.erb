@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @skeleton %>
+
+<div>
+  <%= link_to "Edit this skeleton", edit_skeleton_path(@skeleton) %> |
+  <%= link_to "Back to skeletons", skeletons_path %>
+
+  <%= button_to "Destroy this skeleton", @skeleton, method: :delete %>
+</div>
